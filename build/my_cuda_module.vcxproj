@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21678E16-059F-3688-8D7B-054604E1F914}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>my_cuda_module</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.4.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">my_cuda_module.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">my_cuda_module</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">my_cuda_module.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">my_cuda_module</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">my_cuda_module.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">my_cuda_module</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">my_cuda_module.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">my_cuda_module</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/include" /external:I "C:/ProgramData/anaconda3/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;CMAKE_INTDIR="Debug";my_cuda_module_EXPORTS</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\ProgramData\anaconda3\libs\python312.lib;cudadevrt.lib;cudart_static.lib;C:\Users\wjdtm\Desktop\workspace\ind-bermuda-opensfm\vcpkg\installed\x64-windows\lib\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/Debug/my_cuda_module.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/Debug/my_cuda_module.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/include" /external:I "C:/ProgramData/anaconda3/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";my_cuda_module_EXPORTS</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\ProgramData\anaconda3\libs\python312.lib;cudadevrt.lib;cudart_static.lib;C:\Users\wjdtm\Desktop\workspace\ind-bermuda-opensfm\vcpkg\installed\x64-windows\lib\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/Release/my_cuda_module.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/Release/my_cuda_module.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/include" /external:I "C:/ProgramData/anaconda3/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";my_cuda_module_EXPORTS</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcompiler="/EHsc -Ob1"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O1</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\ProgramData\anaconda3\libs\python312.lib;cudadevrt.lib;cudart_static.lib;C:\Users\wjdtm\Desktop\workspace\ind-bermuda-opensfm\vcpkg\installed\x64-windows\lib\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/MinSizeRel/my_cuda_module.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/MinSizeRel/my_cuda_module.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/include" /external:I "C:/ProgramData/anaconda3/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";my_cuda_module_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";my_cuda_module_EXPORTS</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcompiler="/EHsc -Zi -Ob1"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\wjdtm\Desktop\workspace\python_cuda\extern\pybind11\include;C:\ProgramData\anaconda3\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\ProgramData\anaconda3\libs\python312.lib;cudadevrt.lib;cudart_static.lib;C:\Users\wjdtm\Desktop\workspace\ind-bermuda-opensfm\vcpkg\installed\x64-windows\lib\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/$(Configuration);C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link;C:/Users/wjdtm/Desktop/workspace/ind-bermuda-opensfm/vcpkg/installed/x64-windows/lib/manual-link/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/RelWithDebInfo/my_cuda_module.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/wjdtm/Desktop/workspace/python_cuda/build/RelWithDebInfo/my_cuda_module.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets </AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wjdtm\Desktop\workspace\python_cuda\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/wjdtm/Desktop/workspace/python_cuda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Python38\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/wjdtm/Desktop/workspace/python_cuda -BC:/Users/wjdtm/Desktop/workspace/python_cuda/build --check-stamp-file C:/Users/wjdtm/Desktop/workspace/python_cuda/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCUDAInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCUDALinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCUDACompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/wjdtm/Desktop/workspace/python_cuda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Python38\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/wjdtm/Desktop/workspace/python_cuda -BC:/Users/wjdtm/Desktop/workspace/python_cuda/build --check-stamp-file C:/Users/wjdtm/Desktop/workspace/python_cuda/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCUDAInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCUDALinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCUDACompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/wjdtm/Desktop/workspace/python_cuda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Python38\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/wjdtm/Desktop/workspace/python_cuda -BC:/Users/wjdtm/Desktop/workspace/python_cuda/build --check-stamp-file C:/Users/wjdtm/Desktop/workspace/python_cuda/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCUDAInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCUDALinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCUDACompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/wjdtm/Desktop/workspace/python_cuda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Python38\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/wjdtm/Desktop/workspace/python_cuda -BC:/Users/wjdtm/Desktop/workspace/python_cuda/build --check-stamp-file C:/Users/wjdtm/Desktop/workspace/python_cuda/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCUDAInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Compiler\NVIDIA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCUDALinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Python38\Lib\site-packages\cmake\data\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCUDACompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\3.31.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\wjdtm\Desktop\workspace\python_cuda\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\vector_add.cu" />
+    <CudaCompile Include="..\src\matmul.cu" />
+    <CudaCompile Include="..\src\softmax.cu" />
+    <CudaCompile Include="..\src\relu.cu" />
+    <CudaCompile Include="..\src\loss.cu" />
+    <CudaCompile Include="..\src\two_layers_mlp.cu" />
+    <CudaCompile Include="..\src\optimizer.cu" />
+    <ClCompile Include="C:\Users\wjdtm\Desktop\workspace\python_cuda\src\wrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\wjdtm\Desktop\workspace\python_cuda\build\ZERO_CHECK.vcxproj">
+      <Project>{B40D28FE-D19C-3579-B0FE-0AB8C9E71214}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.4.targets" />
+  </ImportGroup>
+</Project>

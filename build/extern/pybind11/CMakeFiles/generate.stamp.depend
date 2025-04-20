@@ -1,0 +1,20 @@
+# CMake generation dependency list for this directory.
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDependentOption.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeParseArguments.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/FindPythonInterp.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/GNUInstallDirs.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+C:/Python38/Lib/site-packages/cmake/data/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/CMakeLists.txt
+C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/tools/FindPythonLibsNew.cmake
+C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/tools/JoinPaths.cmake
+C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/tools/pybind11Common.cmake
+C:/Users/wjdtm/Desktop/workspace/python_cuda/extern/pybind11/tools/pybind11Tools.cmake
