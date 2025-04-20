@@ -12,18 +12,28 @@ import time
 
 def load_model(filename_prefix='model_final'):
     """Load the saved model parameters"""
+    # Create models directory if it doesn't exist
+    os.makedirs('models', exist_ok=True)
+    
+    # Construct the full path
+    path = os.path.join('models', filename_prefix)
+    
     try:
-        W1 = np.load(f'{filename_prefix}_W1.npy')
-        b1 = np.load(f'{filename_prefix}_b1.npy')
-        W2 = np.load(f'{filename_prefix}_W2.npy')
-        b2 = np.load(f'{filename_prefix}_b2.npy')
-        print(f"Model loaded from '{filename_prefix}_*.npy' files.")
+        W1 = np.load(f'{path}_W1.npy')
+        b1 = np.load(f'{path}_b1.npy')
+        W2 = np.load(f'{path}_W2.npy')
+        b2 = np.load(f'{path}_b2.npy')
+        print(f"Model loaded from 'models/{filename_prefix}_*.npy' files.")
         return W1, b1, W2, b2
     except FileNotFoundError as e:
         print(f"Error: Model files not found. {e}")
         sys.exit(1)
 
 def main():
+    # Create directories for outputs
+    os.makedirs('imgs', exist_ok=True)
+    os.makedirs('models', exist_ok=True)
+    
     # Load MNIST dataset (for testing)
     print("Loading MNIST dataset...")
     X, y = fetch_openml('mnist_784', version=1, return_X_y=True, parser='auto')
@@ -48,7 +58,7 @@ def main():
     threads = 256
     
     # Load saved model parameters
-    model_path = input("Model file path (default: model_final): ") or "model_final"
+    model_path = input("Model file prefix (default: model_final): ") or "model_final"
     W1, b1, W2, b2 = load_model(model_path)
     
     print("Evaluating model on test set...")
@@ -103,7 +113,7 @@ def main():
             plt.text(j, i, confusion_matrix[i, j],
                      ha="center", va="center", color="white" if confusion_matrix[i, j] > confusion_matrix.max() / 2 else "black")
     
-    plt.savefig('confusion_matrix.png')
+    plt.savefig(os.path.join('imgs', 'confusion_matrix.png'))
     plt.show()
     
     # Visualize some test examples
@@ -126,7 +136,7 @@ def main():
         plt.axis('off')
     
     plt.tight_layout()
-    plt.savefig('test_samples.png')
+    plt.savefig(os.path.join('imgs', 'mnist_samples.png'))
     plt.show()
 
 if __name__ == "__main__":

@@ -11,6 +11,10 @@ from sklearn.preprocessing import StandardScaler
 import time
 
 def main():
+    # Create directories for outputs
+    os.makedirs('imgs', exist_ok=True)
+    os.makedirs('models', exist_ok=True)
+    
     # Load MNIST dataset
     print("Loading the MNIST dataset...")
     X, y = fetch_openml('mnist_784', version=1, return_X_y=True, parser='auto')
@@ -145,9 +149,31 @@ def main():
             print(f"Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.6f}, Train Acc.: {train_accuracy:.4f}, Test Acc.: {test_accuracy:.4f}")
         else:
             print(f"Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.6f}, Train Acc.: {train_accuracy:.4f}")
+        
+        # Save model weights at specific epochs
+        if epoch + 1 == 10:
+            np.save(os.path.join('models', 'model_epoch_10_W1.npy'), W1)
+            np.save(os.path.join('models', 'model_epoch_10_b1.npy'), b1)
+            np.save(os.path.join('models', 'model_epoch_10_W2.npy'), W2)
+            np.save(os.path.join('models', 'model_epoch_10_b2.npy'), b2)
+            print("Model checkpoint saved at epoch 10")
+        
+        if epoch + 1 == 20:
+            np.save(os.path.join('models', 'model_epoch_20_W1.npy'), W1)
+            np.save(os.path.join('models', 'model_epoch_20_b1.npy'), b1)
+            np.save(os.path.join('models', 'model_epoch_20_W2.npy'), W2)
+            np.save(os.path.join('models', 'model_epoch_20_b2.npy'), b2)
+            print("Model checkpoint saved at epoch 20")
     
     total_time = time.time() - start_time
     print(f"\nTraining Finished! Total time: {total_time:.2f} seconds")
+    
+    # Save final model weights
+    np.save(os.path.join('models', 'model_final_W1.npy'), W1)
+    np.save(os.path.join('models', 'model_final_b1.npy'), b1)
+    np.save(os.path.join('models', 'model_final_W2.npy'), W2)
+    np.save(os.path.join('models', 'model_final_b2.npy'), b2)
+    print("Final model saved")
     
     # Final test accuracy
     test_correct = 0
@@ -193,7 +219,7 @@ def main():
     plt.grid(True)
     
     plt.tight_layout()
-    plt.savefig('mnist_training.png')
+    plt.savefig(os.path.join('imgs', 'training_history.png'))
     plt.show()
     
     # MNIST Sample Visualization and Prediction Results
@@ -216,7 +242,7 @@ def main():
         plt.axis('off')
     
     plt.tight_layout()
-    plt.savefig('mnist_samples.png')
+    plt.savefig(os.path.join('imgs', 'mnist_samples.png'))
     plt.show()
 
 if __name__ == "__main__":

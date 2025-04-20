@@ -12,13 +12,22 @@ import time
 
 def save_model(W1, b1, W2, b2, filename_prefix='model_final'):
     """Save the model parameters to disk"""
-    np.save(f'{filename_prefix}_W1.npy', W1)
-    np.save(f'{filename_prefix}_b1.npy', b1)
-    np.save(f'{filename_prefix}_W2.npy', W2)
-    np.save(f'{filename_prefix}_b2.npy', b2)
-    print(f"Model saved to '{filename_prefix}_*.npy' files.")
+    # Create models directory if it doesn't exist
+    os.makedirs('models', exist_ok=True)
+    
+    # Save model parameters
+    path = os.path.join('models', filename_prefix)
+    np.save(f'{path}_W1.npy', W1)
+    np.save(f'{path}_b1.npy', b1)
+    np.save(f'{path}_W2.npy', W2)
+    np.save(f'{path}_b2.npy', b2)
+    print(f"Model saved to 'models/{filename_prefix}_*.npy' files.")
 
 def main():
+    # Create directories for outputs
+    os.makedirs('imgs', exist_ok=True)
+    os.makedirs('models', exist_ok=True)
+    
     # Load MNIST dataset
     print("Loading the MNIST dataset...")
     X, y = fetch_openml('mnist_784', version=1, return_X_y=True, parser='auto')
@@ -31,9 +40,9 @@ def main():
     X = scaler.fit_transform(X).astype(np.float32)
     
     # Split the dataset into training and testing sets
-    # 90% training, 10% testing
+    # 80% training, 20% testing
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.1, random_state=42)
+        X, y, test_size=0.2, random_state=42)
     X_train = np.array(X_train)
     X_test = np.array(X_test)
     y_train = np.array(y_train)
@@ -185,7 +194,7 @@ def main():
     plt.grid(True)
     
     plt.tight_layout()
-    plt.savefig('training_history.png')
+    plt.savefig(os.path.join('imgs', 'training_history.png'))
     plt.show()
 
 if __name__ == "__main__":
